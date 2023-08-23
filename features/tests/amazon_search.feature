@@ -22,3 +22,20 @@ Feature: Tests for Amazon search
     |search_word  |search_result  |
     |table        |"table"        |
     |dress        |"dress"        |
+
+
+# Feature: Amazon Search and add items to cart
+#
+#  Scenario: Verify that a user can search for playstation and add it to cart
+#    Given Open Amazon page
+#    When Search for playstation
+#    And Click icon
+#    And Click the Add to cart button
+#    Then Verify item was added to cart
+
+# HW #6 Question #2
+
+  Scenario: Logged out user sees Sign in page when clicking Orders
+    Given Open Amazon page
+    When Click Orders
+    Then Verify sign in page opened

@@ -7,30 +7,40 @@ def bin_go(n: int):
         elif i % 3 == 0:
             print(f'{i} : Bin')
         elif i % 7 == 0:
-            print (f'{i} : Go')
+            print(f'{i} : Go')
+        else:
+            print(i)
+
 
 #bin_go(n=100)
 
 # Question 2
 def sum_numbers(n: int):
     result = 1
-    for i in range (2, n+1):
-        result = result * i
-    print(f"The factorial of {n} is {result}")
+    for i in range (0, n+1):
+        result = result + i
+    print(f"The sum of {n} is {result}")
 
-#sum_numbers(10)
+sum_numbers(10)
 
 #LEVEL 2
 # Question 1
 def find_max(a: int, b: int, c: int):
     #list = [a, b, c]
     print("Maximum Number is: ", max(a, b, c))
+    if a > b and a > c:
+        max_num = a
+    elif b > a and b > c:
+        max_num = b
+    else:
+        max_num = c
+    return max_num
 
-#x = int(input("Enter First number: "))
-#y = int(input("Enter Second number: "))
-#z = int(input("Enter Third number: "))
+x = int(input("Enter First number: "))
+y = int(input("Enter Second number: "))
+z = int(input("Enter Third number: "))
 
-#find_max(a=x, b=y, c=z)
+print(find_max(a=x, b=y, c=z))
 
 
 
@@ -53,19 +63,20 @@ def fibonacci_sequence(n):
     if n < 0:
         print("Incorrect input entered")
     elif n == 0:
-        return a
+        print(a)
     elif n == 1:
-        return b
+        print(b)
     else:
         for i in range(2, n):
             c = a + b
             a = b
             b = c
-        return b
-print(fibonacci_sequence(9))
+            print(b)
+fibonacci_sequence(9)
 
 
 #0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
+
 
 
 
