@@ -108,8 +108,8 @@
 #     else:
 #         return False
 #
-# print(is_anagram(s1: 'cat', s2: 'act'))
-# print(is_anagram(s1: "cat", s2: "ace"))
+# print(is_anagram('cat', 'act'))
+# print(is_anagram("cat", "ace"))
 
 # def is_palindrome(s: str):
 #
