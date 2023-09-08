@@ -1,5 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+
 class Page:
 
     def __init__(self, driver):
@@ -44,14 +46,21 @@ class Page:
     def close_page(self):
         self.driver.close()
 
-    def wait_for_element_clickable(self, *locator):
+    def wait_for_element_clickable(self, locator):
         e = self.wait.until(
-        EC.element_to_be_clickable(locator),
-        message = f'Element not clickable: {locator}'
-                  )
+            EC.element_to_be_clickable(locator),
+            message=f'Element not clickable: {locator}'
+        )
+        # e.click()
+
+    def wait_for_element_clickable_click(self, locator):
+        e = self.wait.until(
+            EC.element_to_be_clickable(locator),
+            message=f'Element not clickable: {locator}'
+        )
         e.click()
 
-    def wait_for_element_disappear(self, *locator):
+    def wait_for_element_disappear(self, locator):
         self.wait.until(
             EC.invisibility_of_element_located(locator),
             message=f'Element did not disappear: {locator}'
@@ -69,7 +78,3 @@ class Page:
 
     def verify_partial_url(self, expected_part_of_url):
         self.wait.until(EC.url_contains(expected_part_of_url))
-
-
-
-
