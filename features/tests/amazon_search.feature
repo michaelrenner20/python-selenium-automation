@@ -63,3 +63,9 @@ Feature: Tests for Amazon search
     When Click icon
     When Click the Add to cart button
     Then Verify item was added to cart
+
+    Scenario: User can select and search in a department
+    Given Open Amazon page
+    When Select books department
+    And Search for Can't hurt me
+    Then Verify books department is selected
