@@ -13,7 +13,7 @@ class Header(Page):
     LANG_SELECTION = (By.CSS_SELECTOR, ".icp-nav-flag-us")
     SPANISH_LANG = (By.CSS_SELECTOR, '#nav-flyout-icp [href="#switch-lang=es_US"]')
     DEPT_SELECTION = (By.ID, 'searchDropdownBox')
-    SUBHEADER_DEPT = (By.CSS_SELECTOR, '#nav-subnav [data-category="books"]')
+    SUBHEADER_DEPT = (By.CSS_SELECTOR, '[data-category="books"]')
 
     def search_product(self, product):
         self.input_text(product, *self.SEARCH_FIELD)

@@ -62,7 +62,7 @@ class Page:
 
     def wait_for_element_appear(self, locator):
         self.wait.until(
-            EC.visibility_of_element_located(locator),
+            EC.presence_of_element_located(locator),
             message=f'Element did not appear: {locator}'
         )
 
