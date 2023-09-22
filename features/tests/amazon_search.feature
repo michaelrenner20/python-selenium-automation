@@ -1,6 +1,6 @@
 # Created by micha at 7/29/2023
 Feature: Tests for Amazon search
-  # Enter feature description here
+behave  # Enter feature description here
 
 #  Scenario: Verify that a user can search for a table
 #    Given Open Amazon page
@@ -57,6 +57,7 @@ Feature: Tests for Amazon search
     When Click on cart icon
     Then Verify Your Amazon Cart is empty text present
 
+@smoke
   Scenario: Verify product has been added to shopping cart
     Given Open Amazon page
     When Search for playstation 5 console
