@@ -5,12 +5,13 @@
 #     for j in fruits:
 #         print(i + ' ' + j)
 
+#Just change the < or > signs to switch from ascending to descending order!
 # #Selection Sort-time complexity is n2
 def selection_sort(arr:list):
     for i in range(len(arr)):
         min_index = i
         for j in range(i+1, len(arr)):
-            if arr[j] < arr[min_index]:
+            if arr[j] > arr[min_index]:
                 min_index = j
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
@@ -26,7 +27,7 @@ print(test_data)
 def bubble_sort(arr: list):
     for i in range(len(arr)):
         for j in range(len(arr) - 1 - i):
-            if arr[j] > arr[j + 1]:
+            if arr[j] < arr[j + 1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr
